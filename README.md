@@ -1,4 +1,4 @@
-#Neighborhood Map
+# Neighborhood Map
 
 Discover the lovely parks from Bucharest in this project created for the Udacity Google Scholarship. This project was made with Create React App.
 
@@ -19,11 +19,11 @@ It also contains two components:
 
 In order to view the project, the user can run the following:
 
-#####npm start
+##### npm start
 The app will open immediately.
 If it doesn't, no worries. Simply open your browser and type http://localhost:3000 to access it.
 
-####npm run build
+#### npm run build
 This method helps you build the app for production.
 For those interested to build the app in production mode, you need to run the following command: `serve -s build`. Afterward, simply enter http://localhost:5000 into your browser.
 
