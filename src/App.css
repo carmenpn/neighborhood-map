@@ -1,0 +1,163 @@
+html {
+  /*overflow-y: hidden!important;*/
+}
+
+.App {
+  text-align: center;
+}
+
+.App-header {
+  background-color: #222;
+  padding: 15px;
+  color: white;
+}
+
+.App-title {
+  font-size: 1.5em;
+  margin: 0;
+}
+
+.App-intro {
+  font-size: large;
+}
+
+/*MAP*/
+
+.container-dimensions {
+  height: 900px;
+  width: 100vw;
+}
+
+.map-dimensions {
+  /*height: 100%;*/
+}
+
+/*PARK*/
+
+.park-list-container {
+  height: 100%;
+  overflow: hidden;
+  float: left;
+}
+
+.park-list {
+  list-style-type: none;
+  text-align: left;
+  background-color: #016a79;
+  color: white;
+  float: left;
+  font-family: "Calibri", sans-serif;
+  font-size: 1.05em;
+  padding: 20px;
+  height: 100vh;
+  margin: 0;
+  position: relative;
+  z-index: 99;
+  overflow: auto;
+  text-overflow: ellipsis;
+}
+
+.park-list li,
+.delete-input {
+  cursor: pointer;
+}
+
+.filter-parks {
+  padding: 10px;
+  margin: 20px 0;
+  width: 200px;
+}
+
+.delete-input {
+  margin: 0 10px;
+}
+
+/*FOOTER*/
+
+.footer {
+ width: 100%;
+ background-color: #222;
+ color: white;
+ position: fixed;
+ z-index: 0;
+ bottom: 0;
+ display: block;
+}
+
+.footer h5 {
+  margin: 15px 0;
+  padding-left: 180px;
+}
+
+/*HAMBURGER MENU*/
+
+.mobile-list {
+  position: absolute;
+  top: 13px;
+  left: 20px;
+  font-size: 35px;
+  color: white;
+  display: none;
+}
+
+/*ERROR*/
+
+.error {
+  font-family: 'Calibri', sans-serif;
+  font-size: 24px;
+  background-color: white;
+  padding: 60px;
+  text-align: center;
+  max-width: 350px;
+  margin: 50px auto;
+  color: black;
+  box-shadow: 0 0 10px rgba(0,0,0,0.3);
+}
+
+/*CUSTOM INFOWINDOW*/
+
+.infoWindow {
+  position: absolute;
+  z-index: 999;
+  left: 300px;
+  background: white;
+  /*padding: 0 5px;*/
+  font-size: 15px;
+  box-shadow: 0 0 5px rgba(0,0,0,0.3);
+  font-family: "Calibri", sans-serif;
+}
+
+/*MEDIA QUERIES*/
+
+@media screen and (max-width: 600px) {
+  .park-list {
+    transform: translate(-300px, 0);
+    -webkit-transform: translate(-300px, 0);
+    transition: transform 0.5s ease;
+  }
+
+  .park-list.clicked {
+    transform: translate(0, 0);
+    -webkit-transform: translate(0, 0);
+    transition: transform 0.5s ease;
+  }
+
+  .mobile-list {
+    display: block;
+  }
+}
+
+@media screen and (max-width: 460px) {
+  .infoWindow {
+    left: 200px;
+  }
+
+  .park-list {
+    font-size: 1em;
+    width: 200px;
+  }
+
+  .filter-parks {
+    width: 120px;
+  }
+}
